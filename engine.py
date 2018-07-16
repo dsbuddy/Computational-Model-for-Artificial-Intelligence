@@ -690,10 +690,15 @@ def SaveStatusToFile(status):
 	file.write("\n\n------------------------- Trial #" + str(trialsRun) + " -------------------------\n\n")
 	file.write(status)
 	# print('[Message] Trial #' + str(trialsRun) + ' Status saved to "' + m.outputFile + '"')
-	if exp == 1:
-		print(str(trialsRun) + "/100 for file #" + m.outputFile.split("_")[1].split(".")[0])
-	elif exp == 2:
-		print(str(trialsRun) + "/180 for file #" + m.outputFile.split("_")[1].split(".")[0])
+
+	totalExp = 100
+	if exp == 2:
+		totalExp = 180
+	elif exp == 3:
+		totalExp = 150
+
+	print(str(trialsRun) + "/"+str(totalExp)+" for file #" + m.outputFile.split("_")[1].split(".")[0])
+
 	#CSV
 	outputCSV(str(m.outputFile[:m.outputFile.find(".")] + "CSV.csv"))
 	#HTML OUT
@@ -723,6 +728,10 @@ def checkOutSym(t, a):
 	elif exp == 2:
 		if t.getTransition()[0] == 0:
 			if (str(t.getTransition()[1]) == "7"):
+				outSym.append(str(trialsRun+1)+":"+str(a))
+	elif exp == 3:
+		if str(t.getTransition()[0]) == "3":
+			if (str(t.getTransition()[1]) == "4"):
 				outSym.append(str(trialsRun+1)+":"+str(a))
 
 

@@ -51,6 +51,12 @@ def userPrompt():
 		elif experiment == 11:
 			print("\nStarting Delayed Conditioning Full . . .")
 			delayedConditioningFull(fileName)
+		elif experiment == 12:
+			print("\nStarting Second Order Conditioning Full . . .")
+			secondOrderConditioningFull(fileName)
+		elif experiment == 13:
+			print("\nStarting Latent Inhibition Full . . .")
+			latentInhibitionFull(fileName)
 		else:
 			print("Not a valid experiment")
 			sys.exit()
@@ -62,13 +68,25 @@ def delayedConditioning():
 	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput.txt', 1)
 
 def delayedConditioningFull(fileName):
-	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'trials/delayedOutput_' + str(fileName) + '.txt', 1)
+	if not os.path.exists("trials1"):
+		os.makedirs("trials1")
+	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'trials1/delayedOutput_' + str(fileName) + '.txt', 1)
 
 def secondOrderConditioning():
 	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'secondOrderOutput.txt', 2)
 
+def secondOrderConditioningFull(fileName):
+	if not os.path.exists("trials2"):
+		os.makedirs("trials2")
+	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'trials2/secondOrderOutput_' + str(fileName) + '.txt', 2)
+
 def latentInhibition():
 	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt', 3)
+
+def latentInhibitionFull(fileName):
+	if not os.path.exists("trials3"):
+		os.makedirs("trials3")
+	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'trials2/latentInhibitionOutput_' + str(fileName) + '.txt', 3)
 
 def extinction():
 	pass

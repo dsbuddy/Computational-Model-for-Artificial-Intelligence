@@ -9,6 +9,8 @@ echo '5) Partial Reinforcement      10) Extinction in Second Order Conditioning'
 
 read expNum
 
+# echo "run" | python3 scriptExp.py $(($expNum+10)) 1
+
 for (( i=1; i<101; ++i )) ; do
 	echo "run" | python3 scriptExp.py $(($expNum+10)) $i
 done

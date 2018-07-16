@@ -14,6 +14,8 @@ def userPrompt():
 	userIn += "\n5) Partial Reinforcement      10) Extinction in Second Order Conditioning"
 	userIn += "\n\nExperiment #"
 
+
+
 	print(int(sys.argv[1]))
 	print(int(sys.argv[2]))
 
@@ -60,6 +62,9 @@ def userPrompt():
 	elif experiment == 12:
 		print("\nStarting Second Order Conditioning Full . . .")
 		secondOrderConditioningFull(fileName)
+	elif experiment == 13:
+		print("\nStarting Latent Inhibition Full . . .")
+		latentInhibitionFull(fileName)
 	
 
 def delayedConditioning():
@@ -80,6 +85,11 @@ def secondOrderConditioningFull(fileName):
 
 def latentInhibition():
 	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt', 3)
+
+def latentInhibitionFull(fileName):
+	if not os.path.exists("trials3"):
+		os.makedirs("trials3")
+	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'trials3/latentInhibitionOutput_' + str(fileName) + '.txt', 3)
 
 def extinction():
 	pass
