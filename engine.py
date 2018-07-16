@@ -696,8 +696,10 @@ def SaveStatusToFile(status):
 		totalExp = 180
 	elif exp == 3:
 		totalExp = 150
+	elif exp == 4:
+		totalExp = 80
 
-	print(str(trialsRun) + "/"+str(totalExp)+" for file #" + m.outputFile.split("_")[1].split(".")[0])
+	print(str(trialsRun/totalExp*100)+"%"+" done file #" + m.outputFile.split("_")[1].split(".")[0])
 
 	#CSV
 	outputCSV(str(m.outputFile[:m.outputFile.find(".")] + "CSV.csv"))
@@ -732,6 +734,10 @@ def checkOutSym(t, a):
 	elif exp == 3:
 		if str(t.getTransition()[0]) == "3":
 			if (str(t.getTransition()[1]) == "4"):
+				outSym.append(str(trialsRun+1)+":"+str(a))
+	elif exp == 4:
+		if str(t.getTransition()[0]) == "3":
+			if (str(t.getTransition()[1]) == "7"):
 				outSym.append(str(trialsRun+1)+":"+str(a))
 
 

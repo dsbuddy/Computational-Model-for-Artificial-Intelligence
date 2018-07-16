@@ -65,6 +65,9 @@ def userPrompt():
 	elif experiment == 13:
 		print("\nStarting Latent Inhibition Full . . .")
 		latentInhibitionFull(fileName)
+	elif experiment == 14:
+		print("\nStarting Extinction Full . . .")
+		extinctionFull(fileName)
 	
 
 def delayedConditioning():
@@ -93,6 +96,11 @@ def latentInhibitionFull(fileName):
 
 def extinction():
 	pass
+
+def extinctionFull(fileName):
+	if not os.path.exists("trials4"):
+		os.makedirs("trials4")
+	main('extinction.txt', 'extinctionInput.txt', 'trials4/extinctionOutput_' + str(fileName) + '.txt', 4)
 	
 def partialReinforcement():
 	pass
