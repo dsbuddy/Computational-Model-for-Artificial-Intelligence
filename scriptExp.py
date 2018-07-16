@@ -19,6 +19,10 @@ def userPrompt():
 
 	experiment = int(sys.argv[1])
 	fileName = int(sys.argv[2])
+	print(experiment)
+
+	# experiment = 12
+	# fileName = 1
 
 	if experiment == 1:
 		print("\nStarting Delayed Conditioning . . .")
@@ -53,19 +57,29 @@ def userPrompt():
 	elif experiment == 11:
 		print("\nStarting Delayed Conditioning Full . . .")
 		delayedConditioningFull(fileName)
+	elif experiment == 12:
+		print("\nStarting Second Order Conditioning Full . . .")
+		secondOrderConditioningFull(fileName)
 	
 
 def delayedConditioning():
-	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput.txt')
+	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput.txt', 1)
 
 def delayedConditioningFull(fileName):
-	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput_' + str(fileName) + '.txt', True)
+	if not os.path.exists("trials1"):
+		os.makedirs("trials1")
+	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'trials1/delayedOutput_' + str(fileName) + '.txt', 1)
 
 def secondOrderConditioning():
-	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'secondOrderOutput.txt')
+	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'secondOrderOutput.txt', 2)
+
+def secondOrderConditioningFull(fileName):
+	if not os.path.exists("trials2"):
+		os.makedirs("trials2")
+	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'trials2/secondOrderOutput_' + str(fileName) + '.txt', 2)
 
 def latentInhibition():
-	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt')
+	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt', 3)
 
 def extinction():
 	pass
@@ -109,8 +123,8 @@ def outputToCSV(extractFile, stateI, stateF, csvFilename):
 	# print(finalList)
 
 	# Info to CSV
-	with open("trials/"+csvFilename, 'wb') as myfile:
-		out = csv.writer(open("trials/"+csvFilename,"w"), delimiter=',',quoting=csv.QUOTE_ALL)
+	with open(csvFilename, 'wb') as myfile:
+		out = csv.writer(open(csvFilename,"w"), delimiter=',',quoting=csv.QUOTE_ALL)
 		out.writerow(finalList)
 		print("[Message] Output converted to CSV as \'" + str(csvFilename) + "\'")
 

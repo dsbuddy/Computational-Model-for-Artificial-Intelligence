@@ -1,5 +1,7 @@
 #!/bin/bash
 
-for i in {1..100}; do
-	echo "run\nq" | python3 scriptExp.py 11 $i
+for (( i=1; i<101; ++i )) ; do
+	echo "run" | python3 scriptExp.py $(($1+10)) $i
 done
+
+# echo "run" | python3 scriptExp.py

@@ -59,16 +59,16 @@ def userPrompt():
 		sys.exit()
 
 def delayedConditioning():
-	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput.txt')
+	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput.txt', 1)
 
 def delayedConditioningFull(fileName):
-	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'delayedOutput_' + str(fileName) + '.txt')
+	main('delayedConditioning.txt', 'delayedConditioningInput.txt', 'trials/delayedOutput_' + str(fileName) + '.txt', 1)
 
 def secondOrderConditioning():
-	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'secondOrderOutput.txt')
+	main('secondOrderConditioning.txt', 'secondOrderConditioningInput.txt', 'secondOrderOutput.txt', 2)
 
 def latentInhibition():
-	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt')
+	main('latentInhibition.txt', 'latentInhibitionInput.txt', 'latentInhibitionOutput.txt', 3)
 
 def extinction():
 	pass
