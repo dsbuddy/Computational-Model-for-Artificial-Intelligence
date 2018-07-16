@@ -739,6 +739,11 @@ def checkOutSym(t, a):
 		if str(t.getTransition()[0]) == "3":
 			if (str(t.getTransition()[1]) == "7"):
 				outSym.append(str(trialsRun+1)+":"+str(a))
+	elif exp == 6:
+		if str(t.getTransition()[0]) == "0":
+			if (str(t.getTransition()[1]) == "4"):
+				print(str(a))
+				outSym.append(str(trialsRun+1)+":"+str(a))
 
 
 def LoadFromFile(fileName):
