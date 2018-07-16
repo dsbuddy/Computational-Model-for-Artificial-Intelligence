@@ -723,10 +723,7 @@ def checkOutSym(t, a):
 	elif exp == 2:
 		if t.getTransition()[0] == 0:
 			if (str(t.getTransition()[1]) == "7"):
-				# print(str(a))
-				# print(str(trialsRun+1)+":"+str(a))
 				outSym.append(str(trialsRun+1)+":"+str(a))
-				# print(outSym)
 
 
 def LoadFromFile(fileName):

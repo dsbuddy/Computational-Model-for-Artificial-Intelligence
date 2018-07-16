@@ -48958,3 +48958,195 @@ Last Input: [['cs1-', 1.0]]
       Confidence: 0.09538800496215165
       PDelta:
          {'': 1.0, 'salivate': 0.0}
+
+
+------------------------- Trial #1 -------------------------
+
+Sigma: ['', 'ucs+', 'cs1+', 'cs2+', 'ucs-', 'cs1-', 'cs2-']
+Delta: ['', 'salivate']
+Last Input: [['ucs-', 1.0]]
+
+------- All States ------
+[ C] State 0
+   <ucs+>: State 0 -> State 1
+      Confidence: 1000000.0
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+   <cs1+>: State 0 -> State 3
+      Confidence: 0.10000019999996
+      PDelta:
+         {'': 0.9999980000044001, 'salivate': 1.9999956000096804e-06}
+[+ ] State 1
+   <ucs->: State 1 -> State 2
+      Confidence: 1000000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 2
+   <'EPSILON'>: State 2 -> State 0
+      Confidence: 10000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 3
+   <ucs+>: State 3 -> State 4
+      Confidence: 1000000.2
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+[+ ] State 4
+   <cs1->: State 4 -> State 5
+      Confidence: 0.1
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 5
+   <ucs->: State 5 -> State 6
+      Confidence: 1000000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[ql] State 6
+   <'EPSILON'>: State 6 -> State 0
+      Confidence: 0.1
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+
+
+------------------------- Trial #2 -------------------------
+
+Sigma: ['', 'ucs+', 'cs1+', 'cs2+', 'ucs-', 'cs1-', 'cs2-']
+Delta: ['', 'salivate']
+Last Input: [['ucs-', 1.0]]
+
+------- All States ------
+[ C] State 0
+   <ucs+>: State 0 -> State 1
+      Confidence: 1000000.0
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+   <cs1+>: State 0 -> State 3
+      Confidence: 0.09974980527047546
+      PDelta:
+         {'': 0.9999959849059418, 'salivate': 4.015094058436274e-06}
+[+ ] State 1
+   <ucs->: State 1 -> State 2
+      Confidence: 1000000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 2
+   <'EPSILON'>: State 2 -> State 0
+      Confidence: 10000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 3
+   <ucs+>: State 3 -> State 4
+      Confidence: 994994.774108524
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+[+ ] State 4
+   <cs1->: State 4 -> State 5
+      Confidence: 0.09949943751096492
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 5
+   <ucs->: State 5 -> State 6
+      Confidence: 997494.04765625
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[ql] State 6
+   <'EPSILON'>: State 6 -> State 0
+      Confidence: 0.1
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+
+
+------------------------- Trial #3 -------------------------
+
+Sigma: ['', 'ucs+', 'cs1+', 'cs2+', 'ucs-', 'cs1-', 'cs2-']
+Delta: ['', 'salivate']
+Last Input: [['ucs-', 1.0]]
+
+------- All States ------
+[ C] State 0
+   <ucs+>: State 0 -> State 1
+      Confidence: 1000000.0
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+   <cs1+>: State 0 -> State 3
+      Confidence: 0.09926318980012382
+      PDelta:
+         {'': 0.9999939497241345, 'salivate': 6.050275865664989e-06}
+[+ ] State 1
+   <ucs->: State 1 -> State 2
+      Confidence: 1000000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 2
+   <'EPSILON'>: State 2 -> State 0
+      Confidence: 10000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 3
+   <ucs+>: State 3 -> State 4
+      Confidence: 990003.6895237971
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+[+ ] State 4
+   <cs1->: State 4 -> State 5
+      Confidence: 0.09900030925264573
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 5
+   <ucs->: State 5 -> State 6
+      Confidence: 994988.9911584235
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[ql] State 6
+   <'EPSILON'>: State 6 -> State 0
+      Confidence: 0.0997625
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+
+
+------------------------- Trial #4 -------------------------
+
+Sigma: ['', 'ucs+', 'cs1+', 'cs2+', 'ucs-', 'cs1-', 'cs2-']
+Delta: ['', 'salivate']
+Last Input: [['ucs-', 1.0]]
+
+------- All States ------
+[ C] State 0
+   <ucs+>: State 0 -> State 1
+      Confidence: 1000000.0
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+   <cs1+>: State 0 -> State 3
+      Confidence: 0.09879022362436696
+      PDelta:
+         {'': 0.9999918944733035, 'salivate': 8.105526696530797e-06}
+[+ ] State 1
+   <ucs->: State 1 -> State 2
+      Confidence: 1000000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 2
+   <'EPSILON'>: State 2 -> State 0
+      Confidence: 10000.0
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 3
+   <ucs+>: State 3 -> State 4
+      Confidence: 985027.9803678379
+      PDelta:
+         {'': 0.0, 'salivate': 1.0}
+[+ ] State 4
+   <cs1->: State 4 -> State 5
+      Confidence: 0.09850271863710976
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[+ ] State 5
+   <ucs->: State 5 -> State 6
+      Confidence: 992485.3582653487
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
+[ql] State 6
+   <'EPSILON'>: State 6 -> State 0
+      Confidence: 0.09953741085937501
+      PDelta:
+         {'': 1.0, 'salivate': 0.0}
